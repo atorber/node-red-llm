@@ -1,25 +1,26 @@
 {
-  "name": "@atorber/node-red-baidu-dmp",
-  "version": "0.5.0",
+  "name": "@atorber/node-red-llm",
+  "version": "0.1.0",
   "author": {
     "name": "atorber",
     "email": "atorber@163.com"
   },
   "bugs": {
-    "url": "https://github.com/atorber/node-red-baidu-dmp/issues"
+    "url": "https://github.com/atorber/node-red-llm/issues"
   },
   "dependencies": {
+    "axios": "^1.6.7",
     "crypto": "^1.0.1",
     "https-proxy-agent": "5.0.0",
     "is-utf8": "0.2.1",
+    "mockjs": "^1.1.0",
     "mqtt": "^2.14.0",
     "request-promise": "^4.2.6",
     "url": "^0.11.0",
-    "urlencode": "^1.1.0",
-    "mockjs": "^1.1.0"
+    "urlencode": "^1.1.0"
   },
   "description": "MQTT Node for Baidu IoTPlatform using custom authentication",
-  "homepage": "https://github.com/atorber/node-red-baidu-dmp#readme",
+  "homepage": "https://github.com/atorber/node-red-llm#readme",
   "keywords": [
     "node-red",
     "mqtt",
@@ -30,14 +31,13 @@
   "node-red": {
     "version": ">=2.0.0",
     "nodes": {
-      "baidu-iot-device": "baidu-iot-device.js",
-      "baidu-dmp":"baidu-dmp.js",
-      "mocknode":"mocknode.js"
+      "llm-request": "llm-request.js",
+      "mocknode": "mocknode.js"
     }
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atorber/node-red-baidu-dmp.git"
+    "url": "git+https://github.com/atorber/node-red-llm.git"
   },
   "publishConfig": {
     "access": "public",

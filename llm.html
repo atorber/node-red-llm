@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    RED.nodes.registerType('llm-request', {
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            name: { value: "" },
+            openaiUrl: { value: "", required: true },
+            openaiKey: { value: "", required: true },
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.png",
+        label: function() {
+            return this.name || "llm-request";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="llm-request">
+    <div class="form-row">
+        <label for="node-input-openaiUrl"><i class="fa fa-globe"></i> OpenAI URL</label>
+        <input type="text" id="node-input-openaiUrl" placeholder="https://api.openai.com/v1/engines/...">
+    </div>
+    <div class="form-row">
+        <label for="node-input-openaiKey"><i class="fa fa-key"></i> OpenAI Key</label>
+        <input type="text" id="node-input-openaiKey" placeholder="Your OpenAI API Key...">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name...">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="llm-request">
+    <p>This node makes requests to OpenAI API with given URL and Key.</p>
+</script>
